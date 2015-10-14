@@ -1,0 +1,211 @@
+/*MUSIC AREA STYLES*/
+.coverFlow{
+	/*SET THE WIDTH OF THE VIEWABLE AREA HERE*/
+	width: 820px;
+	padding-top: 20px;
+	white-space: nowrap;
+}
+.coverFlowWrapper {
+	width: 820px;
+	height: 285px;
+	overflow-x: hidden;
+	position: relative;
+	float: left;
+}
+.coverFlowWrapperOuter {
+	margin: 0 auto;
+	width: 880px;
+}
+
+.coverFlowNav i {
+	font-size: 28px;
+	color: #d43f3a;
+}
+.coverFlowNav:focus {
+	outline: none;
+}
+.coverFlowNav {
+	height: 30px;
+	width: 30px;
+	z-index: 9;
+	cursor: pointer;
+	position: relative;
+	float: left;
+	margin-top: 85px;
+	border: 0;
+	background: none;
+}
+.coverFlowNav.next {
+	float: right;
+}
+
+.coverFlow ul li:before {
+	content: "";
+	position: absolute;
+	top: 181px;
+	left: 398px;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	border-top: 3px solid #d43f3a;
+	display: block;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	z-index: 10;
+}
+.coverFlow ul li.selected2:before {
+	visibility: visible;
+	border-top: 20px solid #d43f3a;
+	transition:.2s border-top ease-out;
+	-moz-transition:.2s border-top ease-out;
+}
+.coverFlow ul li:after {
+	content: "";
+	position: absolute;
+	top: 179px;
+	left: 403px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 1px solid #fff;
+	display: block;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	z-index: 11;
+}
+.coverFlow ul li.selected2:after {
+	visibility: visible;
+	border-top: 15px solid #fff;
+	transition:.2s border-top ease-out;
+	-moz-transition:.2s border-top ease-out;
+}
+
+.coverFlow ul li p {
+	opacity: 0;
+}
+.coverFlow ul li.selected2 p {
+	width: 820px;
+	margin-left: -327px;
+	text-align: center;
+	opacity: 1;
+	padding-top: 20px;
+	transition:.2s opacity ease-in;
+	-moz-transition:.2s opacity ease-in;
+}
+.coverFlow ul li.selected2 p a {
+	color: #d43f3a; 
+	font-weight: bold;
+}
+
+@media (max-width: 767px) {
+	.coverFlow {
+		width: 190px;
+		margin-left: -315px;
+	}
+	.coverFlowWrapper {
+		width: 190px;
+	}
+	.coverFlowWrapperOuter {
+		width: 250px;
+	}
+	.coverFlow ul li.selected2 p {
+		width: 190px;
+		margin-left: -12px;
+	}
+	.coverFlow ul li:before {
+		left: 83px;
+	}
+	.coverFlow ul li:after {
+		left: 88px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.coverFlow {
+		width: 492px;
+		margin-left: -164px;
+	}
+	.coverFlowWrapper {
+		width: 492px;
+	}
+	.coverFlowWrapperOuter {
+		width: 552px;
+	}
+	.coverFlow ul li.selected2 p {
+		width: 492px;
+		margin-left: -164px;
+	}
+	.coverFlow ul li:before {
+		left: 233px;
+	}
+	.coverFlow ul li:after {
+		left: 238px;
+	}
+}
+
+@media (min-width: 992px) {
+}
+
+
+	.coverFlow ul{
+		/*SET THE HEIGHT OF THE VIEWABLE AREA HERE*/
+		height: 220px;
+		
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+		.coverFlow ul li{
+			/*SET THE WIDTH OF YOUR INDIVIDUAL SLIDES HERE.
+			You can also add padding or borders or any styling to the items to control the appearance*/
+			width:164px;
+			height: 164px;
+			box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			-o-box-sizing:border-box;
+			-ms-box-sizing:border-box;
+			display: block;
+			float: left;
+			margin: 0;
+			vertical-align: top;
+			text-align: center;
+			white-space: normal;
+			padding: 0;
+			text-align: center;
+			cursor: pointer;
+		}
+		
+/*NEXT/PREV BUTTON STYLES*/
+
+.coverFlow ul li img {
+	height: 130px;
+	width: 130px;
+	margin-top: 15px;
+	box-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+	.coverFlow ul li.selected img {
+		height: 180px;
+		width: 180px;
+		z-index: 9;
+		position: relative;
+		margin-top: -15px;
+		margin-left: -8px;
+		/*border: 2px solid #3796d2;
+		box-shadow: 0 0 15px rgba(0,0,0,.5);*/
+		transition:.2s all ease-out;
+		-moz-transition:.2s all ease-out;
+	}
+.coverFlow ul li img.img-circle {
+	border: 4px #d43f3a solid;
+	padding: 5px;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+	filter: gray; /* IE6-9 */
+	-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+	opacity: 0.3;
+}
+.coverFlow ul li.selected .img-circle {
+	opacity: 1;
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}
+

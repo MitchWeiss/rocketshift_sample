@@ -1,0 +1,96 @@
+body {
+	background: #e1e1e1;
+	/*min-height: 100%;
+	margin: auto;*/
+}
+
+/*ul.cardList {
+	width: 450px;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}*/
+
+/*ul.cardList li {
+	width: 430px;
+	float: left;
+	list-style: none;
+	padding: 10px;
+	padding-top: 30px;
+}*/
+
+ul.cardList li {
+list-style: none;
+}
+
+ul {
+padding-left: 0px;
+}
+
+@media only screen and (min-width: 450px) {
+	div.card{
+		width: 400px;
+	}
+	
+	ul.cardList {
+		width: 450px;
+		padding: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+div.card {
+	background: #fff;
+	/*width: 400px;*/
+	position: relative;
+	padding: 15px;
+	/*box-shadow: 3px 3px rgba( 0, 0, 0, 0.1 );*/
+	font-family: Open Sans;
+	color: #444;
+	font-size: 14px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border-bottom: 3px solid #6699cc;
+	}
+
+div.card p {
+	margin: 0 0 15px 0;
+	}
+
+div.card p.card-title {
+	font-size: 28px;
+	color: #6699cc;
+	}
+
+div.card p.links {
+	border-top: 1px solid #e5e5e5;
+	padding: 6px 0 0 0;
+	display: block;
+	margin-bottom: -10px;
+	text-align: center;
+	}
+
+div.card img.full {
+	width: 430px;
+	margin: 0 0 15px -15px;
+	}
+	
+i.fa {
+	color: #a2a2a2;
+	padding: 15px;
+}
+
+i.fa:hover {
+	color: #6699cc;
+}
+
+li#first {
+	padding-top: 75px;
+}
+
+a {
+	text-decoration: none;
+	color: #6699cc;
+}
